@@ -12,12 +12,7 @@ export default function AboutUs() {
           <p className="text-gray-600 mb-6 leading-relaxed">
             MICASA HOMEeeeeeeeeeee
           </p>
-          {/* 
-             👇 Quick Note: 
-             Since this IS the AboutUs page, linking to "/AboutUs" just refreshes the page.
-             You might want to change href="/" or remove the link if it's not needed. 
-          */}
-          <Link href="/AboutUs" className="inline-block bg-teal-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-teal-700 transition">
+          <Link href="/" className="inline-block bg-teal-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-teal-700 transition">
             Read More
           </Link>
         </div>
