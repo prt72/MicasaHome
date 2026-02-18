@@ -4,15 +4,16 @@ import Link from "next/link"
 
 export default function Services() {
   const services = [
-    { icon: "🏠", title: "Penjagaan Warga Emas", titleEn: "Elderly Residential Care" },
-    { icon: "🕐", title: "Penjagaan Harian / Sementara / Sepenuh Masa", titleEn: "Long Term / Respite / Day Care" },
-    { icon: "🏥", title: "Penjagaan Selepas Pembedahan", titleEn: "Post Operative Care" },
-    { icon: "💪", title: "Fisioterapi", titleEn: "Physiotherapy" },
-    { icon: "🩹", title: "Penjagaan Luka dan Penukaran Tiub", titleEn: "Wound Care & Tube Change" },
-    { icon: "🦽", title: "Jual / Sewa Alatan Perubatan", titleEn: "Medical Equipment Sale / Rental" },
-    { icon: "🚑", title: "Khidmat Ambulans 24 Jam", titleEn: "24 Hours Ambulance Service" },
-    { icon: "👨‍⚕️", title: "Lawatan Doktor", titleEn: "Doctor Visits" }
+    { icon: "fa-house-chimney-user", title: "Penjagaan Warga Emas", titleEn: "Elderly Residential Care" },
+    { icon: "fa-hand-holding-heart", title: "Penjagaan Harian / Sementara / Sepenuh Masa", titleEn: "Long Term / Respite / Day Care" },
+    { icon: "fa-briefcase-medical", title: "Penjagaan Selepas Pembedahan", titleEn: "Post Operative Care" },
+    { icon: "fa-person-running", title: "Fisioterapi", titleEn: "Physiotherapy" },
+    { icon: "fa-bandage", title: "Penjagaan Luka dan Penukaran Tiub", titleEn: "Wound Care & Tube Change" },
+    { icon: "fa-wheelchair", title: "Jual / Sewa Alatan Perubatan", titleEn: "Medical Equipment Sale / Rental" },
+    { icon: "fa-truck-medical", title: "Khidmat Ambulans 24 Jam", titleEn: "24 Hours Ambulance Service" },
+    { icon: "fa-user-doctor", title: "Lawatan Doktor", titleEn: "Doctor Visits" }
   ]
+
 
   const reasons = [
     "Post Hospitalisation care / Penjagaan Selepas Hospital",
@@ -36,8 +37,8 @@ export default function Services() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
               <div key={index} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 text-center border border-gray-100 group">
-                <div className="w-16 h-16 mx-auto mb-4 bg-blue-50 rounded-full flex items-center justify-center text-3xl group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                  {service.icon}
+                <div className="w-16 h-16 mx-auto mb-4 bg-blue-50 rounded-full flex items-center justify-center text-3xl group-hover:bg-[#0080a0]/10 group-hover:text-white transition-colors">
+                  <i className={`fa-solid ${service.icon} text-[#0080a0] text-2xl`} />
                 </div>
                 <h3 className="font-bold text-lg mb-1 text-gray-800">{service.titleEn}</h3>
                 <p className="text-sm text-gray-500">{service.title}</p>
@@ -56,9 +57,21 @@ export default function Services() {
           <div>
             <h2 className="text-3xl font-bold mb-4 text-teal-600">About Us</h2>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              MICASA HOME provides professional and compassionate home health care services for elderly and patients in need. We are committed to delivering quality care with dignity, comfort, and safety in the comfort of your own home.
-            </p>
-            <Link href="/AboutUs" className="inline-block bg-teal-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-teal-700 transition">
+            Micasa Home Care is dedicated to providing compassionate and reliable{" "}
+            <strong>
+              residential care, day care services, respite care, post-rehabilitation support,
+              and post-operative care
+            </strong>{" "}
+            in a safe, comfortable, and truly home-like environment.
+
+            <br /><br />
+
+            We believe that care goes beyond assistance — it is about kindness, patience,
+            and genuine human connection. Our experienced caregivers treat every
+            individual with dignity, respect, and heartfelt attention.
+          </p>
+
+            <Link href="/AboutUs" className="inline-block bg-[#c5467f] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#c5467f]/80 transition">
               Read More
             </Link>
           </div>
@@ -66,7 +79,7 @@ export default function Services() {
       </section>
 
       {/* ================= WHY CHOOSE US & CONTACT FORM ================= */}
-      <section className="py-16 px-4 bg-blue-900 text-white">
+      <section className="py-16 px-4 bg-[#0080a0] text-white">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
 
           {/* LEFT: Why Choose Us */}
@@ -93,7 +106,7 @@ export default function Services() {
             href="https://wa.me/60164523533?text=Hi%20Micasa%20Home,%20I%20am%20interested%20in%20your%20services."
             target="_blank"
             rel="noopener noreferrer"
-            className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg transition-shadow"
+            className="fixed top-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg transition-shadow"
             aria-label="Chat with us on WhatsApp"
           >
             <svg

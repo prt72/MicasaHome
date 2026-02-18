@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://micasahome.my
+
+# Sitemaps
+Sitemap: https://micasahome.my/sitemap.xml

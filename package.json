@@ -1,15 +1,19 @@
 {
+  "type": "module",
   "name": "micasa-home",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.2.0",
     "next": "16.1.6",
+    "next-sitemap": "^4.2.3",
     "react": "19.2.3",
     "react-dom": "19.2.3"
   },
