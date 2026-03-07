@@ -8,22 +8,18 @@ export default function Services() {
     { icon: "fa-hand-holding-heart", title: "Penjagaan Harian / Sementara / Sepenuh Masa", titleEn: "Long Term / Respite / Day Care" },
     { icon: "fa-briefcase-medical", title: "Penjagaan Selepas Pembedahan", titleEn: "Post Operative Care" },
     { icon: "fa-person-running", title: "Fisioterapi", titleEn: "Physiotherapy" },
-    { icon: "fa-bandage", title: "Penjagaan Luka dan Penukaran Tiub", titleEn: "Wound Care & Tube Change" },
+    { icon: "fa-bandage", title: "Penjagaan Luka", titleEn: "Wound Care" },
+    { icon: "fa-solid fa-vial", title: "Penukaran Tiub Ryles serta Tiub Kencing", titleEn: "Ryles Tube & Urine Tube Change" },
     { icon: "fa-wheelchair", title: "Jual / Sewa Alatan Perubatan", titleEn: "Medical Equipment Sale / Rental" },
     { icon: "fa-truck-medical", title: "Khidmat Ambulans 24 Jam", titleEn: "24 Hours Ambulance Service" },
-    { icon: "fa-user-doctor", title: "Lawatan Doktor", titleEn: "Doctor Visits" }
   ]
 
 
   const reasons = [
     "Post Hospitalisation care / Penjagaan Selepas Hospital",
     "Family is at work or overseas / Keluarga Bekerja atau Di Luar Negara",
-    "24hrs qualified Nurses / Jururawat Berkelayakan 24 Jam",
-    "Nurse calling system / Sistem Panggilan Jururawat",
     "Fully Furnished room / Bilik Perabot Lengkap",
-    "Fully with Air Conditioner / Penghawa Dingin",
-    "Wifi & Astro Services",
-    "Chronic care assistance / Bantuan Penjagaan Kronik"
+    "Chronic care assistance / Bantuan Penjagaan Kronik",
   ]
 
   return (
@@ -34,11 +30,17 @@ export default function Services() {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-2 text-gray-800">Our Services</h2>
           <p className="text-center text-gray-600 mb-12">Perkhidmatan Kami</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6">            
             {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 text-center border border-gray-100 group">
+              <div
+                key={index}
+                className={`bg-white rounded-xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 text-center border border-gray-100 group
+                col-span-1 sm:col-span-1 lg:col-span-2
+                ${index === 6 ? "lg:col-start-3" : ""}
+              `}
+              >
                 <div className="w-16 h-16 mx-auto mb-4 bg-blue-50 rounded-full flex items-center justify-center text-3xl group-hover:bg-[#0080a0]/10 group-hover:text-white transition-colors">
-                  <i className={`fa-solid ${service.icon} text-[#0080a0] text-2xl`} />
+                  <i className={`fa-solid ${service.icon} text-[#2ac4f4] text-2xl`} />
                 </div>
                 <h3 className="font-bold text-lg mb-1 text-gray-800">{service.titleEn}</h3>
                 <p className="text-sm text-gray-500">{service.title}</p>
@@ -52,12 +54,12 @@ export default function Services() {
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <img src="/about.jpg" alt="About Micasa Home" className="rounded-xl shadow-lg w-full object-cover h-80" />
+            <img src="/COMING SOON.svg" alt="About Micasa Home" className="rounded-xl shadow-lg w-full object-cover h-80" />
           </div>
           <div>
-            <h2 className="text-3xl font-bold mb-4 text-teal-600">About Us</h2>
+            <h2 className="text-3xl font-bold mb-4 text-[#0080a0]">About Us</h2>
             <p className="text-gray-600 mb-6 leading-relaxed">
-            Micasa Home Care is dedicated to providing compassionate and reliable{" "}
+            Micasa Home Care Centre is dedicated to providing compassionate and reliable{" "}
             <strong>
               residential care, day care services, respite care, post-rehabilitation support,
               and post-operative care
@@ -101,25 +103,8 @@ export default function Services() {
               ))}
             </ul>
           </div>
-          {/* Floating WhatsApp Button */}
-          <a
-            href="https://wa.me/60164523533?text=Hi%20Micasa%20Home,%20I%20am%20interested%20in%20your%20services."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="fixed top-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg transition-shadow"
-            aria-label="Chat with us on WhatsApp"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 32 32"
-              className="w-8 h-8 fill-current"
-            >
-              <path d="M16 .396C7.164.396 0 7.56 0 16.396c0 2.887.75 5.703 2.177 8.182L.08 32l7.588-2.063a15.94 15.94 0 008.332 2.29h.006c8.835 0 16-7.164 16-16S24.84.396 16 .396zm0 29.07a13.86 13.86 0 01-7.055-1.93l-.506-.3-4.503 1.225 1.2-4.388-.33-.54A13.83 13.83 0 012.14 16.4c0-7.65 6.21-13.86 13.86-13.86 7.65 0 13.86 6.21 13.86 13.86 0 7.65-6.21 13.86-13.86 13.86zm7.72-10.38c-.422-.21-2.5-1.233-2.887-1.374-.386-.14-.668-.21-.95.21-.28.422-1.09 1.374-1.336 1.656-.246.28-.492.316-.914.105-.422-.21-1.78-.655-3.392-2.087-1.254-1.117-2.1-2.497-2.346-2.92-.246-.422-.026-.65.184-.86.19-.19.422-.492.633-.738.21-.246.28-.422.422-.703.14-.28.07-.527-.035-.738-.105-.21-.95-2.29-1.3-3.14-.343-.826-.692-.713-.95-.727l-.81-.014c-.28 0-.738.105-1.123.527-.386.422-1.477 1.444-1.477 3.52 0 2.076 1.512 4.08 1.723 4.36.21.28 2.98 4.547 7.223 6.37 1.01.435 1.797.695 2.41.89 1.012.32 1.933.275 2.662.167.812-.12 2.5-1.02 2.852-2.006.35-.984.35-1.828.246-2.006-.105-.176-.386-.28-.81-.492z" />
-            </svg>
-          </a>
         </div>
       </section>
-
     </div>
   )
 }

@@ -39,3 +39,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Ignore generated sitemap files
+public/sitemap.xml
+public/sitemap-0.xml
+public/robots.txt
+
+# Keep ignoring node_modules and .next
+node_modules
+.next

@@ -2,7 +2,8 @@ import Link from "next/link"
 
 export default function Header() {
   return (
-    <header className="bg-white shadow-md">
+    // 👇 ADDED: sticky top-0 z-50 bg-white
+    <header className="sticky top-0 z-50 bg-white shadow-md">
 
       {/* ===== TOP BAR (Phone) ===== */}
       <div className="max-w-6xl mx-auto flex items-center justify-between py-4 px-4">
@@ -15,8 +16,8 @@ export default function Header() {
             className="w-12 h-12 object-contain"
           />
           <div>
-            <h1 className="text-2xl font-bold text-teal-600">Micasa Home</h1>
-            <p className="text-sm text-gray-500">Home Health Care Specialist</p>
+            <h1 className="text-2xl font-bold text-[#c5467f]">Micasa Home Care Centre</h1>
+            <p className="text-sm text-gray-500">Nursing Care Specialist</p>
           </div>
         </div>
 
@@ -36,9 +37,9 @@ export default function Header() {
           <ul className="flex gap-8 py-4 text-gray-700 font-medium">
             <li><Link href="/" className="hover:text-teal-600 transition">Home</Link></li>
             <li><Link href="/AboutUs" className="hover:text-teal-600 transition">About Us</Link></li>
-            <li><Link href="/services" className="hover:text-teal-600 transition">Services</Link></li>
-            <li><Link href="/gallery" className="hover:text-teal-600 transition">Gallery</Link></li>
-            <li><Link href="/contact" className="hover:text-teal-600 transition">Contact Us</Link></li>
+            {/* <li><Link href="/services" className="hover:text-teal-600 transition">Services</Link></li> */}
+            {/* <li><Link href="/gallery" className="hover:text-teal-600 transition">Gallery</Link></li> */}
+            <li><Link href="/ContactUs" className="hover:text-teal-600 transition">Contact Us</Link></li>
           </ul>
         </div>
       </nav>
