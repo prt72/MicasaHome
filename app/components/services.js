@@ -30,20 +30,23 @@ export default function Services() {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-2 text-gray-800">Our Services</h2>
           <p className="text-center text-gray-600 mb-12">Perkhidmatan Kami</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6">            
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
               <div
                 key={index}
-                className={`bg-white rounded-xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 text-center border border-gray-100 group
-                col-span-1 sm:col-span-1 lg:col-span-2
-                ${index === 6 ? "lg:col-start-3" : ""}
-              `}
+                className="bg-white rounded-xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 text-center border border-gray-100 group"
               >
-                <div className="w-16 h-16 mx-auto mb-4 bg-blue-50 rounded-full flex items-center justify-center text-3xl group-hover:bg-[#0080a0]/10 group-hover:text-white transition-colors">
+                <div className="w-16 h-16 mx-auto mb-4 bg-blue-50 rounded-full flex items-center justify-center text-3xl group-hover:bg-[#0080a0]/10 transition-colors">
                   <i className={`fa-solid ${service.icon} text-[#2ac4f4] text-2xl`} />
                 </div>
-                <h3 className="font-bold text-lg mb-1 text-gray-800">{service.titleEn}</h3>
-                <p className="text-sm text-gray-500">{service.title}</p>
+
+                <h3 className="font-bold text-lg mb-1 text-gray-800">
+                  {service.titleEn}
+                </h3>
+
+                <p className="text-sm text-gray-500">
+                  {service.title}
+                </p>
               </div>
             ))}
           </div>
